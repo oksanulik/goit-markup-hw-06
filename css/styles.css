@@ -11,6 +11,7 @@
   --customers-color: #8e8f99;
   --modal-backgraund-color: #fcfcfc;
   --footer-icon-active: #31d0aa;
+  --modal-check-color: #757575;
 }
 * {
   box-sizing: border-box;
@@ -625,6 +626,10 @@ img {
 .modal-input {
   width: 100%;
   height: 40px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--main-text-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   background-color: var(--main-backgraund-color);
@@ -670,7 +675,7 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--main-text-color);
   padding: 8px 16px;
   background-color: var(--main-backgraund-color);
   outline: transparent;
@@ -678,6 +683,39 @@ img {
   border-radius: 4px;
   resize: none;
 }
+.modal-comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+/* ----------------------------------------- */
+.check-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--modal-check-color);
+  display: flex;
+  transition-property: fill, background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.check-text span {
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--main-text-color);
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+.input-check:checked + .check-text span {
+  background-color: var(--accent-active-color);
+  border: none;
+  fill: var(--footer-logo-color);
+}
+/* .active-text {
+  color: var(--accent-passive-color);
+} */
 .submit {
   font-family: inherit;
   font-weight: 500;
