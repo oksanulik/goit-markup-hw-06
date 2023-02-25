@@ -693,6 +693,7 @@ img {
   letter-spacing: 0.04em;
   color: var(--modal-check-color);
   display: flex;
+  align-items: center;
   transition-property: fill, background-color, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -713,9 +714,10 @@ img {
   border: none;
   fill: var(--footer-logo-color);
 }
-/* .active-text {
+.active-text {
   color: var(--accent-passive-color);
-} */
+  text-decoration: underline;
+}
 .submit {
   font-family: inherit;
   font-weight: 500;
